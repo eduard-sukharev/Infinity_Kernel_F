@@ -27,6 +27,7 @@
 	qcom,cdc-us-euro-gpios;
 	qcom,msm-spk-ext-pa = <&tlmm 124 0>;
 	qcom,msm-hs-micbias-type = "internal";
+	qcom,msm-micbias2-ext-cap;
 	qcom,audio-routing =
 		"RX_BIAS", "MCLK",
 		"SPK_RX_BIAS", "MCLK",
