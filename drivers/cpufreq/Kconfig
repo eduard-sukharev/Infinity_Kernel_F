@@ -144,8 +144,6 @@ config CPU_FREQ_DEFAULT_GOV_SCHED
 	  Use the CPUfreq governor 'sched' as default. This scales
 	  cpu frequency using CPU utilization estimates from the
 	  scheduler.
-<<<<<<< HEAD
-
 config CPU_FREQ_DEFAULT_GOV_LIONFISH
 	bool "lionfish"
 	select CPU_FREQ_GOV_LIONFISH
@@ -157,8 +155,6 @@ config CPU_FREQ_DEFAULT_GOV_DESPAIR
 	select CPU_FREQ_GOV_DESPAIR
 	help
 
-=======
->>>>>>> 97777c3b1cee... add Bioshock gov
 config CPU_FREQ_DEFAULT_GOV_BIOSHOCK
 	bool "BioShock"
 	select CPU_FREQ_GOV_BIOSHOCK
@@ -230,8 +226,6 @@ config CPU_FREQ_GOV_ONDEMAND
 
 	  If in doubt, say N.
 
-<<<<<<< HEAD
-=======
 config CPU_FREQ_GOV_BLU_ACTIVE
 	tristate "'blu_active' cpufreq policy governor"
 	help
@@ -263,7 +257,6 @@ config CPU_FREQ_GOV_LIONHEART
              lionheart' - a "smart" optimized governor!
              If in doubt, say N.
 
->>>>>>> 428103110df0... add Lionheart gov
 config CPU_FREQ_GOV_INTERACTIVE
 	bool "'interactive' cpufreq policy governor"
 	help
@@ -351,20 +344,16 @@ config CPUFREQ_DT
 
 	  If in doubt, say N.
 
-<<<<<<< HEAD
 config CPU_FREQ_GOV_DESPAIR
 	tristate "'despair' cpufreq governor"
 	depends on CPU_FREQ
 
-=======
->>>>>>> 97777c3b1cee... add Bioshock gov
 config CPU_FREQ_GOV_BIOSHOCK
 	tristate "'bioshock' cpufreq bioshock"
 	depends on CPU_FREQ
 	help
 	  'bioshock' - More aggressive version of conservative
 
-<<<<<<< HEAD
 config CPU_FREQ_GOV_LIONFISH
 	tristate "'lionfish' governor"
 	depends on CPU_FREQ
@@ -387,8 +376,6 @@ config CPU_FREQ_GOV_LIONFISH
 
 	  If in doubt, say N.
 
-=======
->>>>>>> 97777c3b1cee... add Bioshock gov
 config CPU_BOOST
 	tristate "Event base short term CPU freq boost"
 	depends on CPU_FREQ
