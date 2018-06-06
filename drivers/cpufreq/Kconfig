@@ -55,14 +55,6 @@ config CPU_FREQ_STAT_DETAILS
 
 	  If in doubt, say N.
 
-config CPU_FREQ_OVERCLOCK
-	bool "Enable specific CPU frequency overclock"
-	depends on CPU_FREQ
-	default n
-	help
-	  Enable this to get specific overclock
-	  and forcing to selecting speed bin 1.
-
 choice
 	prompt "Default CPUFreq governor"
 	default CPU_FREQ_DEFAULT_GOV_USERSPACE if ARM_SA1100_CPUFREQ || ARM_SA1110_CPUFREQ
@@ -196,14 +188,6 @@ config CPU_FREQ_DEFAULT_GOV_ELECTRON
 	  you to get a full dynamic cpu frequency capable system by simply
 	  loading your cpufreq low-level hardware driver, using the
 	  'electron' governor for latency-sensitive workloads.
-
-config CPU_FREQ_DEFAULT_GOV_IRONACTIVE
-	bool "ironactive"
-	select CPU_FREQ_GOV_IRONACTIVE
-	help
-	  Use the CPUFreq governor 'ironactive' as default. This cpugovernor
-	  is based on the 'interactive' governor with many changes made by CAF.
-
 endchoice
 
 config CPU_FREQ_DEFAULT_GOV_ELEMENTALX
@@ -428,23 +412,6 @@ config CPU_FREQ_GOV_ELECTRON
 	depends on CPU_FREQ
 	help
 	  'electron' - another tuned interactive with extra options
-
-config CPU_FREQ_GOV_IRONACTIVE
-	tristate "'ironactive' cpufreq policy governor"
-	help
-	  'ironactive' - This driver adds a dynamic cpufreq policy governor
-	  designed for latency-sensitive workloads.
-
-	  This governor attempts to reduce the latency of clock
-	  increases so that the system is more responsive to
-	  ironactive workloads. Based on 'interactive' governor
-	  with many changes compared to our stock 'interactive'
-	  governor we have from samsung. Mainly CAF changes.
-
-	  To compile this driver as a module, choose M here: the
-	  module will be called cpufreq_ironactive.
-
-	  If in doubt, say N.
 
 config CPU_BOOST
 	tristate "Event base short term CPU freq boost"
