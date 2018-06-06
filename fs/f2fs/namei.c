@@ -590,10 +590,11 @@ err_out:
 
 	kfree(sd);
 
-	f2fs_balance_fs(sbi, true);
-	return err;
-out:
-	handle_failed_inode(inode);
+        handle_failed_inode(inode);
+
+out_free_encrypted_link:
+	if (disk_link.name != (unsigned char *)symname)
+		kfree(disk_link.name);
 	return err;
 }
 
