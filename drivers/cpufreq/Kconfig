@@ -176,10 +176,6 @@ config CPU_FREQ_DEFAULT_GOV_BIOSHOCK
 	help
 	  Default governor of BioShock kernel
 
-config CPU_FREQ_DEFAULT_GOV_DARKNESS
-	bool "darkness"
-	select CPU_FREQ_GOV_DARKNESS
-
 endchoice
 
 config CPU_FREQ_DEFAULT_GOV_ELEMENTALX
@@ -302,9 +298,6 @@ config CPU_FREQ_GOV_CULTIVATION
 	default y
 	help
 	  'cultivation' - another tuned interactive with extra options
-
-config CPU_FREQ_GOV_DARKNESS
-	tristate "'darkness' cpufreq policy governor"
 
 config CPU_FREQ_GOV_CONSERVATIVE
 	tristate "'conservative' cpufreq governor"
